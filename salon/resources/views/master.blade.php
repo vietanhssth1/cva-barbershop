@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="client/css/style.css" type="text/css" media="all" />
     <!-- Style-CSS -->
     <link rel="stylesheet" href="client/css/fontawesome-all.css">
+    <link rel="stylesheet" href="client/css/login.css">
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //css files -->
 

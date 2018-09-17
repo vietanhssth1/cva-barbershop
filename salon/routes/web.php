@@ -11,12 +11,23 @@
 |
 */
 
-Route::get('/', [
-    'as' => '/',
-    'uses' => 'PageController@getIndex'
-]);
+//Homepage
+Route::get('/','PageController@getIndex')->name('home');
 
-Route::get('home', [
-    'as' => 'home',
-    'uses' => 'PageController@getIndex'
-]);
+//Route Login User
+Route::prefix('user')->group(function () {
+    Route::post('login', 'UserAccountController@postLogIn')->name('login');
+    Route::get('logout', 'UserAccountController@getLogOut')->name('logout');
+});
+
+//Route Admin
+Route::prefix('admin')->group(function () {
+    Route::get('login', 'AdminAccountController@getLogIn')->name('get-admin-login');
+    Route::post('login', 'AdminAccountController@postLogIn')->name('post-admin-login');
+    Route::get('logout', 'AdminAccountController@getAdminLogOut')->name('admin-logout');
+    Route::get('index', 'AdminPageController@getIndex')->name('index');
+    
+    Route::middleware(['check.admin'])->group(function () {
+        
+    });
+}); 

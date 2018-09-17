@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face{
+font-family: myFont;
+src: url(../css/HipsterScriptPro.otf);
+}
+div
+{
+  display: block;
+}
+.logo 
+{
+  font-family: myFont;
+  width: 550px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-size:50px;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  color: #FFF5FF;
+}
+.logo:hover
+{
+	text-decoration: none;
+	color: #F8F807;
+}
+body
+{
+  background: url('../../images/blur-26347-27038-hd-wallpapers.jpg');
+}
+.signin
+{
+  margin: auto;
+  float: none;
+  background-color: white;
+  width: 400px;
+  border: solid 1px gray;
+  border-radius: 12px;
+  padding: 20px 30px;
+}
+.err_msg
+{
+  color:red;
+}
